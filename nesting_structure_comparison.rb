@@ -25,7 +25,8 @@ if x is an array
 
 
 #CODE
-# Refactor
+
+# Final Refactor
 class Array
   def same_structure_as(arr2)
     arr1 = self
@@ -76,7 +77,6 @@ end
 
 # First Attempt
 # class Array
-#   #your code here
 #   def same_structure_as(arr2)
 #     p arr1 = self
 #     p arr2 = arr2
@@ -111,9 +111,15 @@ end
 #DRIVER CODE
 
 # p [ 1, [ 1, 1 ] ].same_structure_as( [ [ 2, 2 ], 2 ] ) # false
-p [ 1, [ 1, 1 ] ].same_structure_as( [ 2, [ 2, 2 ] ] ) # true
+# p [ 1, [ 1, 1 ] ].same_structure_as( [ 2, [ 2, 2 ] ] ) # true
 # p [ 1, [ 1, 1 ] ].same_structure_as( [ [ 2 ], 2 ] ) # false
 # p [1,[1,1]].same_structure_as( [2,[2]] ) # false
-p [1,[1,[1]]].same_structure_as([2,[2,2]]) # false
+# p [1,[1,[1]]].same_structure_as([2,[2,2]]) # false
 # p [1].same_structure_as([[1]]) # false
+
+p [1, [1, 2, 3]].same_structure_as([2, [3, 3], 1]) # true
+
+p [[], [[]]].same_structure_as([[[]], [[]]]) # false
+
+p 54.same_structure_as([54]) # Fixnum no method error. This is expected since I'm just appending the function to the Array class.
 
